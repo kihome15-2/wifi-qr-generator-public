@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { QRCodeSVG } from 'qrcode.react'
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
@@ -9,6 +8,7 @@ import { Checkbox } from "@/components/ui/checkbox"
 import { Button } from "@/components/ui/button"
 import { QRCodeWithBrand } from './qr-code-with-brand'
 import { ColorPicker } from './color-picker'
+import { QRCodeSVG } from 'qrcode.react';
 
 export function WifiQRCodeGenerator() {
   const [brandName, setBrandName] = useState('')
@@ -61,6 +61,7 @@ export function WifiQRCodeGenerator() {
           생성하기
         </Button>
       </div>
+      <QRCodeSVG value="your-wifi-data-here" />
     </div>
   )
 }
